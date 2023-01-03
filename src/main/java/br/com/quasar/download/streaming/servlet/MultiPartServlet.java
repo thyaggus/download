@@ -1,8 +1,8 @@
 //https://javadigest.wordpress.com/2012/02/13/downloading-multiple-files-using-multipart-response/
 
-package br.com.quasa.download.streaming.servlet;
+package br.com.quasar.download.streaming.servlet;
 
-import br.com.quasa.download.streaming.service.StreamingService;
+import br.com.quasar.download.streaming.service.StreamingService;
 
 import javax.inject.Inject;
 import javax.servlet.ServletException;

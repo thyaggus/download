@@ -1,4 +1,4 @@
-package br.com.quasa.download.streaming.entidade;
+package br.com.quasar.download.streaming.entidade;
 
 public class Dado {
     private String nome;
@@ -157,7 +157,6 @@ public class Dado {
                 valor + separador +
                 saldo + separador;
     }
-
 
 
     @Override

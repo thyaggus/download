@@ -1,6 +1,6 @@
-package br.com.quasa.download.streaming.servlet;
+package br.com.quasar.download.streaming.servlet;
 
-import br.com.quasa.download.streaming.service.StreamingService;
+import br.com.quasar.download.streaming.service.StreamingService;
 import org.apache.commons.io.output.ChunkedOutputStream;
 
 import javax.inject.Inject;

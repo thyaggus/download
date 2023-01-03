@@ -1,6 +1,6 @@
-package br.com.quasa.download.streaming.resource;
+package br.com.quasar.download.streaming.resource;
 
-import br.com.quasa.download.streaming.service.StreamingService;
+import br.com.quasar.download.streaming.service.StreamingService;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;

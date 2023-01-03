@@ -1,6 +1,6 @@
-package br.com.quasa.download.streaming.service;
+package br.com.quasar.download.streaming.service;
 
-import br.com.quasa.download.streaming.entidade.Dado;
+import br.com.quasar.download.streaming.entidade.Dado;
 
 import java.util.LinkedList;
 import java.util.List;
