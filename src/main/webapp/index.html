@@ -8,18 +8,6 @@
 </head>
 <body>
 <P>Estou vivo!!!</P>
-<fieldset>
-    <lengend>download por streaming</lengend>
-    <label for="qtd"> Multiplicador de repetição: </label>
-    <input id="qtd" name="qtd" type="text"/>
-    <button
-            id="go"
-            name="go"
-            type="button"
-            onclick="downloadWithProgress()">Fazer Download
-    </button>
-</fieldset>
-<br/>
 <br/>
 <fieldset>
     <lengend>Download por Multipart</lengend>
@@ -37,46 +25,6 @@
 <a href="http://localhost:7001/download/teste">Clique aqui para um teste com a servlet</a>
 </body>
 <script type="text/javascript">
-    function downloadWithProgress() {
-      const startTime = new Date().getTime();
-      const multiplicador = document.getElementById("qtd").value || 5;
-
-      const url = 'http://localhost:7001/download/streaming?multiplo=' + multiplicador;
-      console.log('Url: ', url);
-
-      request = new XMLHttpRequest();
-
-      request.responseType = "blob";
-      request.open("get", url, true);
-      request.send();
-
-      request.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-          const imageURL = window.URL.createObjectURL(this.response);
-
-          const anchor = document.createElement("a");
-          anchor.href = imageURL;
-          anchor.download = 'csvStreaming.csv';
-          document.body.appendChild(anchor);
-          anchor.click();
-        }
-      };
-
-      request.onprogress = function (e) {
-        const percent_complete = Math.floor((e.loaded / e.total) * 100);
-
-        const duration = (new Date().getTime() - startTime) / 1000;
-        const bps = e.loaded / duration;
-
-        const kbps = Math.floor(bps / 1024);
-
-
-        console.log(
-          `${percent_complete}% - ${kbps} Kbps`
-        );
-      };
-    }
-
     function downloadWithProgressMulti() {
       const startTime = new Date().getTime();
       const multiplicador = document.getElementById("qtdM").value || 5;
@@ -116,6 +64,7 @@
         );
       };
     }
+
 
 
 </script>
