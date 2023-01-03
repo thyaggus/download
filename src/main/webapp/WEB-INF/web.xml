@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         id="WebApp_ID"
+         version="3.0">
+    <display-name>download</display-name>
+
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>/index.html</welcome-file>
+    </welcome-file-list>
+    <servlet>
+        <servlet-name>streaming</servlet-name>
+        <servlet-class>br.com.quasa.download.streaming.servlet.StreamingServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>streaming</servlet-name>
+        <url-pattern>/streaming/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>multi</servlet-name>
+        <servlet-class>br.com.quasa.download.streaming.servlet.MultiPartServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>multi</servlet-name>
+        <url-pattern>/multi/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>teste</servlet-name>
+        <servlet-class>br.com.quasa.download.streaming.servlet.TesteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>teste</servlet-name>
+        <url-pattern>/teste/*</url-pattern>
+    </servlet-mapping>
+
+</web-app>
