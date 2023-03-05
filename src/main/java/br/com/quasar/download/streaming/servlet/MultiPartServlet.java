@@ -22,6 +22,8 @@ public class MultiPartServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        //https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition
+
         String looping = request.getParameter("multiplo");
         System.out.println(String.format("[ ==> multiplo recebido...: %-5s ]", looping));
         long multiplo = 5;
@@ -31,7 +33,10 @@ public class MultiPartServlet extends HttpServlet {
         System.out.println(String.format("] ==> multiplo considerado: %-5d [", multiplo));
 
         // Set the response type and specify the boundary string
-        response.setContentType("multipart/x-mixed-replace;boundary=???");
+        //response.setContentType("multipart/x-mixed-replace;boundary=???");
+        response.setContentType("application/octet-stream");
+        response.setHeader("Content-Disposition", "attachment; filename='csv.csv'");
+
 
         response.setContentLength(BUFFER_SIZE);
 
