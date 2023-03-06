@@ -21,16 +21,22 @@ public class MultiPartServlet extends HttpServlet {
     private StreamingService service;
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        System.out.println("==========================[ INICIANDO DOWNLOAD ]==========================");
 
         //https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition
 
+
         String looping = request.getParameter("multiplo");
-        System.out.println(String.format("[ ==> multiplo recebido...: %-5s ]", looping));
         long multiplo = 5;
         if (looping != null && !looping.equals("")) {
             multiplo = Integer.valueOf(looping);
         }
-        System.out.println(String.format("] ==> multiplo considerado: %-5d [", multiplo));
+
+        String dispararErro = request.getParameter("erro");
+        if (dispararErro != null && !dispararErro.equals("")) {
+            throw new ServletException("Exceção forçada para tratamento de erro vindo do servlet!!");
+        }
+
 
         // Set the response type and specify the boundary string
         //response.setContentType("multipart/x-mixed-replace;boundary=???");
@@ -47,14 +53,13 @@ public class MultiPartServlet extends HttpServlet {
             byte[] stream = new byte[0];
             try {
                 stream = service.gerarCSV(i);
-                System.out.println("] ==> Enviando arquivo csvMulti.csv [");
                 out.write(stream, 0, stream.length);
                 out.flush();
-                System.out.println("] ==> Finalizado o envio do arquio csvMulti.csv [");
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }
         }
         out.close();
+        System.out.println("==========================[ DOWNLOAD FINALIZADO ]=========================");
     }
 }
