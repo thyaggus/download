@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2022-11-29T14:41:01 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="0512913" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="10" bottomMargin="5" uuid="73e0f127-6e35-4bb5-bcd7-395b4a24cdf9">
+	<property name="ireport.zoom" value="2.0000000000000298"/>
+	<property name="ireport.x" value="52"/>
+	<property name="ireport.y" value="841"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="DIRETORIO_TEMPLATE" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<field name="MDLDCONTA" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NOME" class="java.lang.String"/>
+	<field name="CPF" class="java.lang.String"/>
+	<field name="POSICAO" class="java.lang.String"/>
+	<field name="DATA_EMISSAO" class="java.lang.String"/>
+	<field name="TITULO_RAZAO" class="java.lang.String"/>
+	<field name="AGENCIA" class="java.lang.String"/>
+	<field name="GS" class="java.lang.String"/>
+	<field name="CONTA" class="java.lang.String"/>
+	<field name="DATA_ABERTURA" class="java.lang.String"/>
+	<field name="lista" class="java.util.List">
+		<property name="campos" value="DATA_CONTABIL,DATA_LAN,HISTORICO,COMPLEMENTO,LOTE,BANCO,ORIGEM,DOCUMENTO,VALOR,SALDO"/>
+	</field>
+	<field name="CHEQUE" class="java.lang.String"/>
+	<field name="CHEQUE_TIPO" class="java.lang.String"/>
+	<field name="VENCIMENTO" class="java.lang.String"/>
+	<field name="SITUACAO" class="java.lang.String"/>
+	<field name="LIMITE" class="java.lang.String"/>
+	<field name="BLOQUEADO" class="java.lang.String"/>
+	<field name="DISPONIVEL" class="java.lang.String"/>
+	<field name="CPMF_COBRADO" class="java.lang.String"/>
+	<field name="COMENTARIO_1" class="java.lang.String"/>
+	<field name="COMENTARIO_2" class="java.lang.String"/>
+	<field name="CPF_CNPJ" class="java.lang.String"/>
+	<title>
+		<band height="92">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+			<image>
+				<reportElement x="0" y="0" width="199" height="30" uuid="80231ce8-0c0a-43b7-bdb2-b2ee3eac0300"/>
+				<imageExpression><![CDATA[$P{DIRETORIO_TEMPLATE}+"debian.bmp"]]></imageExpression>
+			</image>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="549" y="0" width="253" height="30" uuid="be10716b-b4d2-4776-9df0-d0644d4dfb76">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right" markup="html">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<b>Extrato de Conta</b>"]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement positionType="Float" x="0" y="45" width="4" height="19" forecolor="#999999" backcolor="#999999" uuid="9ebfd98c-5d0a-4689-bdfb-619e78ba18a8"/>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="7" y="53" width="413" height="11" uuid="036fb62a-d0b6-4bc9-81fe-57ab0ce164fb">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NOME}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="7" y="43" width="413" height="11" uuid="72094b29-d473-455b-a3b1-599709602422">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Nome"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="64" width="420" height="1" uuid="5b146e50-3fa8-4cb8-8325-87b37b27e6e9"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<rectangle>
+				<reportElement positionType="Float" x="420" y="45" width="4" height="19" forecolor="#999999" backcolor="#999999" uuid="6f4f2525-a142-4fb0-9728-41ec23cc0486"/>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="427" y="53" width="133" height="11" uuid="189e1797-0648-4bd0-82e6-640fc5204e38">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CPF}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="427" y="43" width="133" height="11" uuid="484883ea-5293-4fd6-a046-b908fd57e080">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CPF_CNPJ}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="420" y="64" width="140" height="1" uuid="8db0a648-733d-493e-be24-2bd6d09df83c"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<rectangle>
+				<reportElement positionType="Float" x="560" y="45" width="4" height="19" forecolor="#999999" backcolor="#999999" uuid="c78d2822-4a73-4fa1-8abb-d1445af98f43"/>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="567" y="53" width="113" height="11" uuid="1909bd85-f5cd-4419-88af-2506ba390e65">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{POSICAO}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="567" y="43" width="113" height="11" uuid="9b163d9c-1f3a-4b59-b208-7127babdbc16">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Posição"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="560" y="64" width="120" height="1" uuid="b47b55ed-2124-47da-af40-9c6688bbbe1b"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<rectangle>
+				<reportElement positionType="Float" x="680" y="45" width="4" height="19" forecolor="#999999" backcolor="#999999" uuid="8eaea053-94b4-451c-929a-b8ea512e188f"/>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="687" y="53" width="115" height="11" uuid="828cfeb7-904b-4541-9d2c-69ef080e4446">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DATA_EMISSAO}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="687" y="43" width="115" height="11" uuid="a2e4ba46-a5f2-4cf6-9371-f4cf6498b5c7">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Data de emissão"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="680" y="64" width="122" height="1" uuid="cee23b9c-94f0-4fa7-8a9e-7e52c7c13837"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<rectangle>
+				<reportElement positionType="Float" x="0" y="67" width="4" height="19" forecolor="#999999" backcolor="#999999" uuid="7cbb0eb1-2179-46ea-963d-fc77fed38000"/>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="7" y="75" width="143" height="11" uuid="520fd07f-32b7-4a6e-afbe-ec45cd4dee6f">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{AGENCIA}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="7" y="65" width="143" height="11" uuid="e7ba9b73-7ca8-4b1b-bb70-b0030db3fd39">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Agência (prefixo/dv)"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="86" width="150" height="1" uuid="3b641f46-2683-47ab-9ad8-fe55734ad89e"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<rectangle>
+				<reportElement positionType="Float" x="150" y="67" width="4" height="19" forecolor="#999999" backcolor="#999999" uuid="42ef3394-eba2-4a72-b28b-9c210af1076a"/>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="157" y="75" width="43" height="11" uuid="b97319d9-b453-4382-af24-c22a0a2ee6ab">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{GS}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="157" y="65" width="43" height="11" uuid="3d0a9ba8-3c2c-483a-8738-314779592d9a">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["GS"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="150" y="86" width="50" height="1" uuid="ced0de7f-c069-43f2-b7f4-0a5db8dd7016"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<rectangle>
+				<reportElement positionType="Float" x="200" y="67" width="4" height="19" forecolor="#999999" backcolor="#999999" uuid="9bf536e7-19cb-426e-a0d8-dc8013f79027"/>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="207" y="75" width="103" height="11" uuid="7b2bf6c2-faed-491b-8aae-e7756b0ca076">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CONTA}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="207" y="65" width="103" height="11" uuid="05f97b02-4622-4842-9ca2-22f1b3fc4aae">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Conta nº/dv"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="200" y="86" width="110" height="1" uuid="11dbd5c4-a074-4390-90fd-0fa527b12188"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<rectangle>
+				<reportElement positionType="Float" x="310" y="67" width="4" height="19" forecolor="#999999" backcolor="#999999" uuid="43e02825-59be-41d5-a2cd-6b20db253d19"/>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="317" y="75" width="103" height="11" uuid="91155c3d-905b-43ed-8cec-186c441a9505">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DATA_ABERTURA}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="317" y="65" width="103" height="11" uuid="d45fd814-2287-4f24-a883-0a0fba2a8f75">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Data da abertura"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="310" y="86" width="110" height="1" uuid="27e1aac4-aee7-45ea-b0e1-a4b1b4d4396d"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<rectangle>
+				<reportElement positionType="Float" x="420" y="45" width="4" height="19" forecolor="#999999" backcolor="#999999" uuid="31075695-37dc-4ab0-90e4-3786dd328681"/>
+			</rectangle>
+			<line>
+				<reportElement x="420" y="64" width="150" height="1" uuid="f7ad3c23-0192-4564-ba79-8815316c8a64"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="570" y="64" width="50" height="1" uuid="5ec9283e-98a0-44bf-8f90-dd57cd945801"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="620" y="64" width="182" height="1" uuid="77bff98e-b938-4117-9d75-2d14a1575eb5"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="0" y="34" width="413" height="11" uuid="acc4a6d2-1952-4a94-8461-39d2953651d3">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<b>"+$F{MDLDCONTA}+"</b>"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="70">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<printWhenExpression><![CDATA[$V{PAGE_NUMBER} != 1]]></printWhenExpression>
+			<image>
+				<reportElement x="0" y="0" width="199" height="30" uuid="d326ab28-128d-47ac-931f-cbafd08e382e"/>
+				<imageExpression><![CDATA[$P{DIRETORIO_TEMPLATE}+"debian.bmp"]]></imageExpression>
+			</image>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="549" y="0" width="253" height="30" uuid="1266a9b6-16f3-4817-ad1c-daee8b9e715d">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right" markup="html">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<b>Extrato de Conta</b>"]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement positionType="Float" x="0" y="45" width="4" height="19" forecolor="#999999" backcolor="#999999" uuid="f26255e2-e8fc-434c-a578-a2fb2637cb7e"/>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="7" y="53" width="413" height="11" uuid="ec2b4b7d-23fb-4185-96ea-8e2587d42f23">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NOME}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="7" y="44" width="413" height="11" uuid="8c8b92ce-1a45-46ab-8b17-c86f7fbb9517">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Nome"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="64" width="420" height="1" uuid="d95fb14c-a106-45b6-b963-02082e3fa221"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<rectangle>
+				<reportElement positionType="Float" x="420" y="45" width="4" height="19" forecolor="#999999" backcolor="#999999" uuid="58a2d1b0-444d-4da6-b35b-996e21687168">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} != 1]]></printWhenExpression>
+				</reportElement>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="427" y="53" width="143" height="11" uuid="bbbd8aa9-88f5-4171-bf74-c9220fae7bd2">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} != 1]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{AGENCIA}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="427" y="44" width="143" height="11" uuid="83c1bdd6-29b1-4bf7-8d5d-233187858fa3">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} != 1]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Agência (prefixo/dv)"]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement positionType="Float" x="570" y="45" width="4" height="19" forecolor="#999999" backcolor="#999999" uuid="31569141-f6df-4191-9196-6361b175f35a">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} != 1]]></printWhenExpression>
+				</reportElement>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="577" y="53" width="43" height="11" uuid="07be7a52-05dc-4a92-b5c9-9c790a7399bd">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} != 1]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{GS}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="577" y="44" width="43" height="11" uuid="f7989495-35eb-4604-a4c0-338024047f4d">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} != 1]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["GS"]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement positionType="Float" x="620" y="45" width="4" height="19" forecolor="#999999" backcolor="#999999" uuid="0780c19e-8b0f-4ec1-b8d3-9782355274ed">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} != 1]]></printWhenExpression>
+				</reportElement>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="627" y="53" width="175" height="11" uuid="6d09b00e-e19e-4a5f-aad5-e13acbd472e8">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} != 1]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CONTA}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="627" y="44" width="175" height="11" uuid="6b681397-b016-4a28-95bc-12c1eab3ae23">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} != 1]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Conta nº/dv"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="420" y="64" width="382" height="1" uuid="154a7bbc-b6ec-485c-8df8-c7c8ea6b6456"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="0" y="34" width="413" height="11" uuid="245f42bb-d618-4482-9d16-19f84bfb6b09">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<b>"+$F{MDLDCONTA}+"</b>"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="14">
+			<printWhenExpression><![CDATA[!$F{lista}.isEmpty()]]></printWhenExpression>
+			<subreport>
+				<reportElement positionType="Float" x="0" y="0" width="802" height="14" uuid="4371ba42-5492-4754-89f0-0046701f53d3">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{lista})]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{DIRETORIO_TEMPLATE} + "0512913A.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="1">
+			<line>
+				<reportElement x="0" y="0" width="801" height="1" uuid="33ba3d43-6591-431a-accc-ddcbb8af18bc"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="100">
+			<rectangle>
+				<reportElement positionType="Float" x="0" y="6" width="4" height="19" forecolor="#999999" backcolor="#999999" uuid="7eb6fdb6-e644-4ee0-9bec-aa3c1dfa8333"/>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="7" y="11" width="795" height="11" uuid="bf76b72f-7afd-4959-9184-a83e8b30390b">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CHEQUE}+" "+$F{CHEQUE_TIPO}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="25" width="802" height="1" uuid="92877e0d-b3f0-4780-ab81-90291a8765b0"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<rectangle>
+				<reportElement positionType="Float" x="0" y="28" width="4" height="19" forecolor="#999999" backcolor="#999999" uuid="15e15d79-a3f1-4b8d-8f23-8e20d03fc600"/>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="5" y="36" width="113" height="11" uuid="013a818c-3bb7-4f2a-8bb9-741ea5a0a08a">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right" markup="html">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BLOQUEADO}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="7" y="26" width="113" height="11" uuid="4314a99b-99fd-461f-8415-c73e73250f38">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Bloqueado - R$"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="47" width="120" height="1" uuid="edcc4ff3-37c8-4bec-9c92-ec056735f8a2"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<rectangle>
+				<reportElement positionType="Float" x="120" y="28" width="4" height="19" forecolor="#999999" backcolor="#999999" uuid="fc8621cd-9d58-4a83-b834-1c06a718cf6f"/>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="125" y="36" width="113" height="11" uuid="e03ff75e-249a-4451-b479-98c44ccb15f2">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right" markup="html">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DISPONIVEL}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="127" y="26" width="113" height="11" uuid="54650f43-9a74-4196-a8bd-beef8336b165">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Disponível - R$"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="120" y="47" width="120" height="1" uuid="6e486f03-2ed4-41fb-aecc-9cbf2618b7a8"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<rectangle>
+				<reportElement positionType="Float" x="240" y="28" width="4" height="19" forecolor="#999999" backcolor="#999999" uuid="0a12d8bc-97b5-4613-bca6-823339debf2c"/>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="245" y="36" width="113" height="11" uuid="ab55892c-31a4-40c3-82bc-fa34a1aaee4c">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right" markup="html">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CPMF_COBRADO}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="247" y="26" width="113" height="11" uuid="f7362ee9-d395-49aa-b953-15127bb7ff8f">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["CPMF cobrado - R$"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="240" y="47" width="120" height="1" uuid="75a9d245-2344-4bf7-a213-640b2bc962b6"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<rectangle>
+				<reportElement positionType="Float" x="360" y="28" width="4" height="19" forecolor="#999999" backcolor="#999999" uuid="d2fbd2a8-9f2e-4d86-9e8f-1a9df83488d7"/>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="365" y="36" width="113" height="11" uuid="ae93a965-d74e-4605-add9-7eda47c3434d">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right" markup="html">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{VENCIMENTO}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="367" y="26" width="113" height="11" uuid="0aeba897-b68d-4eb7-a8f3-f1f478309bcf">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Vencimento "]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="360" y="47" width="120" height="1" uuid="c89ff6e3-d125-4147-8203-61895d21ddaa"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<rectangle>
+				<reportElement positionType="Float" x="480" y="28" width="4" height="19" forecolor="#999999" backcolor="#999999" uuid="0cb58e80-8795-40cc-b508-4e35452d62fb"/>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="485" y="36" width="113" height="11" uuid="51044601-8ce1-4643-bd73-e383daa011be">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right" markup="html">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{LIMITE}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="487" y="26" width="113" height="11" uuid="bf066964-aecf-4fe2-9be7-0e379b8a9d58">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Limite - R$"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="480" y="47" width="120" height="1" uuid="ba93a288-2e66-4e86-a38a-74e51c9dc6e9"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" mode="Opaque" x="180" y="70" width="400" height="11" backcolor="#CCCCCC" uuid="4852b752-767d-4caf-8ebe-08b07ef5e70c">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center" markup="html">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{COMENTARIO_1}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" mode="Opaque" x="180" y="83" width="400" height="11" backcolor="#CCCCCC" uuid="4af10d6f-12c1-49d3-a34c-08a0bb58c959">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center" markup="html">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{COMENTARIO_2}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="7">
+			<textField>
+				<reportElement positionType="Float" x="770" y="0" width="32" height="7" uuid="558d5244-998d-4bfe-aed0-4ecc3256adac">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="Arial" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Folha " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="0" y="0" width="483" height="7" uuid="18748fe1-408e-4b46-a85f-10947dee08a2"/>
+				<textElement textAlignment="Left">
+					<font fontName="Arial" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Mod. 0.51.291-3 - Nov/2022 - SISBB 22333 - bb.com.br - BB Responde 0800 78 5678 - pvb"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

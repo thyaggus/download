@@ -1,11 +1,11 @@
-package br.com.quasar.download.streaming.service;
+package br.com.quasar.download.multipart.service;
 
-import br.com.quasar.download.streaming.entidade.Dado;
+import br.com.quasar.download.multipart.entidade.Dado;
 
 import java.util.LinkedList;
 import java.util.List;
 
-public class StreamingService {
+public class MultiPartService {
     private static final String SEPARADOR = ";";
     private static final String NOVA_LINHA = System.lineSeparator();
     private static final String CARSET = "UTF8";
@@ -16,15 +16,14 @@ public class StreamingService {
         List<Dado> lancamentos = new LinkedList<>();
         for (long i = inicio * QUANTIDADE; i < ((inicio + 1) * QUANTIDADE); i++) {
             lancamentos.add(new Dado(
-                    "Tiago S F",
-                    9988,
-                    12345678901L,
-                    "13/04/1981",
+                    "13/04/2023",
+                    "13/04/2023",
+                    "histórico",
+                    "complemento",
                     "13",
-                    "historico",
-                    "subHistorico",
-                    String.valueOf(i),
+                    "BB",
                     "Origem",
+                    "documento",
                     String.valueOf(i),
                     String.valueOf(i)
             ));

@@ -1,4 +1,4 @@
-package br.com.quasar.download.streaming.servlet;
+package br.com.quasar.download.multipart.servlet;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

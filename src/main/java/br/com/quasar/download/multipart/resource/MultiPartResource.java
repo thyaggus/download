@@ -1,6 +1,6 @@
-package br.com.quasar.download.streaming.resource;
+package br.com.quasar.download.multipart.resource;
 
-import br.com.quasar.download.streaming.service.StreamingService;
+import br.com.quasar.download.multipart.service.MultiPartService;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
@@ -10,12 +10,12 @@ import javax.ws.rs.core.Response;
 
 @RequestScoped
 @Path("/download")
-public class StreamResource {
+public class MultiPartResource {
 
     private static final String CONTENT_TYPE = "text/html; charset=UTF-8";
 
     @Inject
-    private StreamingService service;
+    private MultiPartService service;
 
     @GET
     @Path("/streamingjaxrs")

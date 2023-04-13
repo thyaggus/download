@@ -1,10 +1,9 @@
 //https://javadigest.wordpress.com/2012/02/13/downloading-multiple-files-using-multipart-response/
 
-package br.com.quasar.download.streaming.servlet;
+package br.com.quasar.download.multipart.servlet;
 
-import br.com.quasar.download.streaming.service.StreamingService;
+import br.com.quasar.download.multipart.service.MultiPartService;
 
-import javax.inject.Inject;
 import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServlet;
@@ -16,9 +15,6 @@ public class MultiPartServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     private static final int BUFFER_SIZE = -1;
-
-    @Inject
-    private StreamingService service;
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("==========================[ INICIANDO DOWNLOAD ]==========================");
@@ -52,7 +48,7 @@ public class MultiPartServlet extends HttpServlet {
         for (int i = 0; i < multiplo; i++) {
             byte[] stream = new byte[0];
             try {
-                stream = service.gerarCSV(i);
+                stream = MultiPartService.gerarCSV(i);
                 out.write(stream, 0, stream.length);
                 out.flush();
             } catch (Exception e) {
